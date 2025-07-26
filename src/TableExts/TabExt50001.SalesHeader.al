@@ -17,6 +17,12 @@ tableextension 50001 SalesHeaderExt extends "Sales Header"
             FieldClass = FlowField;
             CalcFormula = sum("Sales Line"."Unit Price" where("Document Type" = field("Document Type"), "Document No." = field("No.")));
         }
-
+        field(50002; "Sales Line Exit"; Boolean)
+        {
+            Caption = 'Sales Line Exit';
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = exist("Sales Line" where("Document Type" = field("Document Type"), "Document No." = field("No.")));
+        }
     }
 }
