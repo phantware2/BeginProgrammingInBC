@@ -31,6 +31,10 @@ tableextension 50001 SalesHeaderExt extends "Sales Header"
             FieldClass = FlowField;
             CalcFormula = lookup(Contact."E-Mail" where("No." = field("Sell-to Contact No.")));
         }
-
+        field(50004; Blocked; Boolean)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Blocked';
+        }
     }
 }
