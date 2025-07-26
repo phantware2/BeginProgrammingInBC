@@ -19,6 +19,11 @@ pageextension 50001 "Sales Order Ext" extends "Sales Order"
                 ApplicationArea = All;
                 ToolTip = 'Indicates if there are any sales lines associated with this sales order.';
             }
+            field("Contact Email"; Rec."Contact Email")
+            {
+                ApplicationArea = All;
+                ToolTip = 'The email address of the contact associated with this sales order.';
+            }
         }
     }
 }
