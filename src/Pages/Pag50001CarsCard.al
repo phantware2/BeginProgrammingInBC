@@ -21,8 +21,23 @@ page 50001 Cars
                     ApplicationArea = All;
                     ToolTip = 'A description of the car.';
                 }
-
+                field(Blocked; Rec.Blocked)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Indicates whether the car is blocked.';
+                }
             }
+        }
+    }
+    views
+    {
+        view(ActiveCars)
+        {
+            Filters = where("Blocked" = const(false));
+        }
+        view(BlockedCars)
+        {
+            Filters = where("Blocked" = const(true));
         }
     }
 }

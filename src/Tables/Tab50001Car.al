@@ -12,6 +12,11 @@ table 50001 Car
         {
             DataClassification = ToBeClassified;
         }
+        field(3; Blocked; Boolean)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Blocked';
+        }
     }
 
     keys

@@ -36,11 +36,6 @@ table 50000 "My New Table"
         {
             DataClassification = ToBeClassified;
         }
-        field(6; Blocked; Boolean)
-        {
-            DataClassification = ToBeClassified;
-            Caption = 'Blocked';
-        }
     }
 
     keys
