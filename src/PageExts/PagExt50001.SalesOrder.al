@@ -14,6 +14,11 @@ pageextension 50001 "Sales Order Ext" extends "Sales Order"
                 ApplicationArea = All;
                 ToolTip = 'The total unit price of all sales order lines for this sales order.';
             }
+            field("Sales Line Exit"; Rec."Sales Line Exit")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Indicates if there are any sales lines associated with this sales order.';
+            }
         }
     }
 }
