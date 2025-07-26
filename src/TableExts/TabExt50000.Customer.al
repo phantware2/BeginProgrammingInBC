@@ -1,4 +1,4 @@
-tableextension 50000 MyExtension extends Customer
+tableextension 50000 CustomerExt extends Customer
 {
     fields
     {
