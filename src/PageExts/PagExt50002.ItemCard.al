@@ -22,6 +22,17 @@ pageextension 50002 ItemCardExt extends "Item Card"
                 end;
             }
         }
+        addfirst(navigation)
+        {
+            action(ItemSalesLine)
+            {
+                ApplicationArea = All;
+                Caption = 'Item Sales Line';
+                Image = AllLines;
+                RunObject = Page "Sales Lines";
+                RunPageLink = "No." = field("No."), Type = const(Item);
+            }
+        }
     }
 
     var
