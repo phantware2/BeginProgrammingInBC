@@ -33,6 +33,10 @@ pageextension 50002 ItemCardExt extends "Item Card"
                 RunPageLink = "No." = field("No."), Type = const(Item);
             }
         }
+        addfirst(Category_Process)
+        {
+            actionref(NewAction_Promoted; NewAction) { }
+        }
     }
 
     var
