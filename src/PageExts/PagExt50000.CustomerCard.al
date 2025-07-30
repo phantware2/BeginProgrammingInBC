@@ -12,4 +12,24 @@ pageextension 50000 CustomerCardExt extends "Customer Card"
             }
         }
     }
+    actions
+    {
+        addafter("Report Statement")
+        {
+            action(CustomerCars)
+            {
+                ApplicationArea = All;
+                Caption = 'Customer Cars';
+                Image = Action;
+                ToolTip = 'View the cars associated with this customer.';
+
+                trigger OnAction()
+                var
+                    CustomerCarsReport: Report "Customer Cars";
+                begin
+                    CustomerCarsReport.Run();
+                end;
+            }
+        }
+    }
 }
