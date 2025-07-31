@@ -13,7 +13,7 @@ report 50003 "Update Sales Line"
 
             dataitem("Sales Line"; "Sales Line")
             {
-                DataItemLink = "Document Type" = field("Document Type"), "No." = field("No.");
+                DataItemLink = "Document Type" = field("Document Type"), "Document No." = field("No.");
 
                 trigger OnAfterGetRecord()
                 begin
