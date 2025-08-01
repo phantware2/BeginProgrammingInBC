@@ -31,5 +31,20 @@ pageextension 50000 CustomerCardExt extends "Customer Card"
                 end;
             }
         }
+        addfirst(processing)
+        {
+            action(GetAmountInfo)
+            {
+                ApplicationArea = All;
+                Caption = 'Get Sales Order Amount Info';
+                ToolTip = 'Retrieve the total and average sales order amounts for this customer.';
+                Image = NewSum;
+
+                trigger OnAction()
+                begin
+                    Rec.GetSalesOrderAmount();
+                end;
+            }
+        }
     }
 }
